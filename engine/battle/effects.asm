@@ -60,6 +60,8 @@ SleepEffect:
 	call BattleRandom
 	and $7
 	jr z, .setSleepCounter
+	cp $7					; Add line to enable max 6 turns sleeping
+	jr z, .setSleepCounter	; Add line to enable max 6 turns sleeping
 	ld [de], a
 	call PlayCurrentMoveAnimation2
 	ld hl, FellAsleepText
