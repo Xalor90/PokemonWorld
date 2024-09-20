@@ -4170,11 +4170,16 @@ GetDamageVarsForPlayerAttack:
 	ld [hl], a
 	ld hl, wPlayerMovePower
 	ld a, [hli]
-	and a
+	;and a
 	ld d, a ; d = move power
-	ret z ; return if move power is zero
-	ld a, [hl] ; a = [wPlayerMoveType]
-	cp SPECIAL ; types >= SPECIAL are all special
+	;ret z ; return if move power is zero
+	;ld a, [hli] ; a = [wPlayerMoveType]
+	;cp SPECIAL ; types >= SPECIAL are all special
+	ld hl, wPlayerMoveCategory
+	ld a, [hl]
+	cp MOVE_CATEGORY_STATUS
+	ret z
+	cp MOVE_CATEGORY_SPECIAL
 	jr nc, .specialAttack
 .physicalAttack
 	ld hl, wEnemyMonDefense
@@ -4284,10 +4289,15 @@ GetDamageVarsForEnemyAttack:
 	ld hl, wEnemyMovePower
 	ld a, [hli]
 	ld d, a ; d = move power
-	and a
-	ret z ; return if move power is zero
-	ld a, [hl] ; a = [wEnemyMoveType]
-	cp SPECIAL ; types >= SPECIAL are all special
+	;and a
+	;ret z ; return if move power is zero
+	;ld a, [hl] ; a = [wEnemyMoveType]
+	;cp SPECIAL ; types >= SPECIAL are all special
+	ld hl, wEnemyMoveCategory
+	ld a, [hl]
+	cp MOVE_CATEGORY_STATUS
+	ret z
+	cp MOVE_CATEGORY_SPECIAL
 	jr nc, .specialAttack
 .physicalAttack
 	ld hl, wBattleMonDefense

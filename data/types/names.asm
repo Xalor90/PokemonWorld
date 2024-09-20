@@ -22,22 +22,24 @@ ENDR
 	dw .Psychic
 	dw .Ice
 	dw .Dragon
+	dw .Dark
 
 	assert_table_length NUM_TYPES
 
-.Normal:   db "NORMAL@"
-.Fighting: db "FIGHTING@"
-.Flying:   db "FLYING@"
-.Poison:   db "POISON@"
-.Fire:     db "FIRE@"
-.Water:    db "WATER@"
-.Grass:    db "GRASS@"
-.Electric: db "ELECTRIC@"
-.Psychic:  db "PSYCHIC@"
-.Ice:      db "ICE@"
-.Ground:   db "GROUND@"
-.Rock:     db "ROCK@"
-.Bird:     db "BIRD@"
-.Bug:      db "BUG@"
-.Ghost:    db "GHOST@"
-.Dragon:   db "DRAGON@"
+.Normal:   	db "NORMAL@"
+.Fighting: 	db "FIGHTING@"
+.Flying:   	db "FLYING@"
+.Poison:  	db "POISON@"
+.Fire:     	db "FIRE@"
+.Water:    	db "WATER@"
+.Grass:    	db "GRASS@"
+.Electric: 	db "ELECTRIC@"
+.Psychic:  	db "PSYCHIC@"
+.Ice:      	db "ICE@"
+.Ground:   	db "GROUND@"
+.Rock:     	db "ROCK@"
+.Bird:     	db "BIRD@"
+.Bug:      	db "BUG@"
+.Ghost:    	db "GHOST@"
+.Dragon:   	db "DRAGON@"
+.Dark:		db "DARK@"

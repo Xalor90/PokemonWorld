@@ -1158,12 +1158,14 @@ wEnemyMovePower:: db
 wEnemyMoveType:: db
 wEnemyMoveAccuracy:: db
 wEnemyMoveMaxPP:: db
+wEnemyMoveCategory:: db
 wPlayerMoveNum:: db
 wPlayerMoveEffect:: db
 wPlayerMovePower:: db
 wPlayerMoveType:: db
 wPlayerMoveAccuracy:: db
 wPlayerMoveMaxPP:: db
+wPlayerMoveCategory:: db
 
 wEnemyMonSpecies2:: db
 wBattleMonSpecies2:: db
